@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    filter: blur(1.5px);
+}
+
+.slide .f1 {
+    opacity: 1;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox {
+    width: 355px;
+    height: 160px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    border-radius: 25px;
+}
+
+.button {
+    text-align: center;
+    width: 100px;
+    color: white;
+    background-color: #1E3A8A;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.cacc {
+    background-color: #ff3569;
+}
+
+.rodape {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #f1f1f3;
+}
+
+@media screen and (max-width: 450px) {
+    .loginBox {
+        width: 250px;
+        height: auto;
+    }
+
+    input {
+        font-size: 1em;
+    }
+}
